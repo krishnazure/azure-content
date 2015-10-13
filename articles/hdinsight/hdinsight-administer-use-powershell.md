@@ -118,6 +118,30 @@ Once you have the Storage account and the Blob container prepared, you are ready
 		-DefaultStorageContainer $containerName  `
 		-ClusterSizeInNodes $clusterNodes
 
+## Hosting a Linux Cluster
+	#Create SSHPublickey. The following is created using GitHub Shell
+	#Create PrivateKey and Cert.
+	openssl.exe req -x509 -nodes -days 365 -newkey rsa:2048 -keyout myPrivateKey.key -out myCert.pem
+	Command 2
+	C:\GitHub> ssh-keygen -y -f myprivatekey.key
+	Should display something like the following.
+	ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCu0ZW.............
+
+	New-AzureHDInsightCluster -ResourceGroupName $resourceGroupName `
+	    -ClusterName $clusterName `
+	    -Location $location `
+	    -DefaultStorageAccountName "$storageAccountName.blob.core.windows.net" `
+	    -DefaultStorageAccountKey $storageaccountKey `
+	    -DefaultStorageContainer $containerName  `
+	    -ClusterSizeInNodes $clusterNodes `
+	    -HeadNodeSize $headnode -WorkerNodeSize $workernode `
+	    -ClusterType $clustertype `
+	    -OSType "Linux" `
+	    -SshCredential $credential `
+	    -SshPublicKey "ssh-rsa AAAAB3NzaC1yc2EAAAA.............."
+
+
+
 ##List cluster details
 Use the following command to list all clusters in the current subscription:
 
