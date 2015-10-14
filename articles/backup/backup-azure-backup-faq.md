@@ -126,10 +126,10 @@ A1. As of August 2015, The maximum size of data source is as mentioned below for
 
 |S.No |	Operating system |	Maximum size of data source |
 | :-------------: |:-------------| :-----|
-|1| Windows Server 2012 or above| 54400 GB|
-|2| Windows 8 or above| 54400 GB|
-|3| Windows Server 2008, Windows Server 2008 R2 | 1700 GB|
-|4| Windows 7 | 1700 GB|
+|1| Windows Server 2012 or above| 54400 GB| 53.125 TB
+|2| Windows 8 or above| 54400 GB| 53.125 TB
+|3| Windows Server 2008, Windows Server 2008 R2 | 1700 GB| 1.6 TB
+|4| Windows 7 | 1700 GB| 1.6 TB
 
 The datasource size is measured as mentioned below
 
