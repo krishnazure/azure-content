@@ -30,7 +30,7 @@ Provides you with up-to-date information about the latest Azure Guest OS release
 
 ## News updates
 
-###### **Janurary 18 2015**
+###### **Janurary 18 2016**
 Janurary Guest OS rollout is starting Janurary 18 2016, and projected to be released on Februrary 12 2016.
 
 ###### **Janurary 4 2016**
